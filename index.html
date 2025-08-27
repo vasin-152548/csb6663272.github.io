@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+
+    <style>
+      body {
+        background: #2f9fcc;
+        background: linear-gradient(
+          90deg,
+          rgba(47, 159, 204, 1) 0%,
+          rgba(67, 196, 247, 1) 50%,
+          rgba(62, 165, 199, 1) 100%
+        );
+      }
+      .navbar {
+        width: 100%;
+        overflow: visible;
+        background-color: rgb(0, 0, 0);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+      }
+
+      .navbar li {
+        background-color: black;
+      }
+
+      .navbar li:hover {
+        background-color: white;
+      }
+
+      .navbar li:hover > a {
+        color: black;
+      }
+
+      .navbar li {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: white;
+        width: 100%;
+      }
+
+      a:hover {
+        color: black;
+      }
+
+      #lab1:hover .dropdown1,
+      #lab1 > a:hover .dropdown1 {
+        display: block;
+      }
+
+      #lab2:hover .dropdownLab2,
+      #lab2 > a:hover .dropdownLab2 {
+        display: block;
+      }
+
+      #lab1no5:hover > .dropdown2 {
+        display: block;
+      }
+
+      .dropdown1,
+      .dropdownLab2 {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0%;
+      }
+
+      .dropdown2 {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 100%;
+      }
+
+      .navbar > ul > li:nth-child(2):hover::after,
+      .navbar > ul > li:nth-child(3):hover::after,
+      .navbar > ul > li > ul > li:nth-child(5):hover::after {
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        top: 6px;
+        left: 80%;
+      }
+
+      .navbar > ul > li:nth-child(2):hover::after {
+        content: '6';
+      }
+
+      .navbar > ul > li:nth-child(3):hover::after {
+        content: '3';
+      }
+
+      .navbar > ul > li > ul > li:nth-child(5):hover::after {
+        content: '5';
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li id="lab1">
+          <a>Lab1</a>
+          <ul class="dropdown1">
+            <li><a href="./Lab1/lab1no1.html">lab1no1</a></li>
+            <li><a href="./Lab1/Lab1no2.html">lab1no2</a></li>
+            <li><a href="./Lab1/Lab1no3.html">lab1no3</a></li>
+            <li><a href="./Lab1/Lab1no4.html">lab1no4</a></li>
+            <li id="lab1no5">
+              <a>lab1no5A</a>
+              <ul class="dropdown2">
+                <li>
+                  <a href="./Lab1/lab1no5/web1/workshop1/index2.html"
+                    >lab1no5.1</a
+                  >
+                </li>
+                <li>
+                  <a href="./Lab1/lab1no5/web1/workshop1/ZeZar/stuff/home.html"
+                    >lab1no5.2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./Lab1/lab1no5/web1/workshop2/classMonday/homework/exercise1.html"
+                    >lab1no5.3</a
+                  >
+                </li>
+                <li><a href="./Lab1/lab1no5/web1/index4.html">lab1no5.4</a></li>
+              </ul>
+            </li>
+            <li><a href="./Lab1/lab1no5/web2/index.html">lab1no5B</a></li>
+          </ul>
+        </li>
+        <li id="lab2">
+          <a href="">Lab2</a>
+          <ul class="dropdownLab2">
+            <li><a href="./Lab2/lab2-1.html">lab2no1</a></li>
+            <li><a href="./Lab2/lab2-2.html">lab2no2</a></li>
+            <li><a href="./Lab2/lab2-3.html">lab2no3</a></li>
+          </ul>
+        </li>
+        <li><a href="">Lab3</a></li>
+        <li><a href="">Lab4</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
